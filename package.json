@@ -1,0 +1,38 @@
+{
+  "name": "conosaurus",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/app.js",
+    "start:watch": "npm-watch start"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "npm-watch": "^0.6.0"
+  },
+  "description": "The comic convention planning website",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Conosaurus/Conosaurus.git"
+  },
+  "keywords": [
+    "Conosaurus",
+    "comic",
+    "convention"
+  ],
+  "author": "John Wojtkielewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Conosaurus/Conosaurus/issues"
+  },
+  "homepage": "https://github.com/Conosaurus/Conosaurus#readme",
+  "watch": {
+    "start": {
+      "extensions": ["js"],
+      "patterns": ["src"],
+      "quiet": true
+    }
+  }
+}
