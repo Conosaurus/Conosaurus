@@ -6,7 +6,6 @@
     "comic",
     "convention"
   ],
-  
   "author": "John Wojtkielewicz",
   "bugs": {
     "url": "https://github.com/Conosaurus/Conosaurus/issues"
@@ -19,21 +18,25 @@
     "url": "git+https://github.com/Conosaurus/Conosaurus.git"
   },
   "version": "0.0.0",
-  
   "main": "app.js",
   "scripts": {
     "start": "node ./src/app.js",
     "start:watch": "npm-watch start"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "npm-watch": "^0.6.0"
   },
   "watch": {
     "start": {
-      "extensions": ["js"],
-      "patterns": ["src"],
+      "extensions": [
+        "js"
+      ],
+      "patterns": [
+        "src"
+      ],
       "quiet": true
     }
   }
