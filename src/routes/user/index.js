@@ -1,16 +1,11 @@
-var { User } = require('../../models');
-
-var express = require('express');
-var router = express.Router();
+const { UserService } = require('../../services');
+const express = require('express');
+const router = express.Router();
 
 /* GET Users */
-router.get('/', function(req, res, next) {
-  var users = [];
-  
-  users.push(new User({name: "John W"}));
-  users.push(new User({name: "Steph Z"}));
-  users.push(new User({name: "Cat"}));
-  users.push(new User({name: "Lily"}));
+router.get('/', async function(req, res, next) {
+  const service = new UserService();
+  const users = await service.query();
   
   res.send(users);
 });

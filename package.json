@@ -20,10 +20,12 @@
   "version": "0.0.0",
   "main": "app.js",
   "scripts": {
+    "setup:database": "node --no-warnings ./scripts/setup-database.js",
     "start": "node ./src/app.js",
     "start:watch": "npm-watch start"
   },
   "dependencies": {
+    "@azure/cosmos": "^3.6.2",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
