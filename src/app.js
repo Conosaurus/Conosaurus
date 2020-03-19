@@ -1,9 +1,9 @@
 // Run dotenv as early as possible
 require('dotenv').config()
-var express = require('express');
+const express = require('express');
 
 // API Middleware Setup
-var app = express();
+const app = express();
 app.use(express.json());
 
 // Service Routes
