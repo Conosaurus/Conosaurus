@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/', express.static(__dirname + '/client'));
+app.use('/', express.static(__dirname + '/client-dist'));
 app.use('/api', require('./routes'));
 
 app.listen(3000, function() {
