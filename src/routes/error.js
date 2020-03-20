@@ -9,8 +9,14 @@ router.use(function(req, res, next) {
 
 // Error handler
 router.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.send(err);
+  // todo: log the error
+  if(err.status) {
+    res.status(err.status);
+    res.send(err);    
+  } else {
+    res.status(500);
+    res.send('An unexpected error occured.');
+  }
 });
 
 module.exports = router;
