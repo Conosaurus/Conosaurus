@@ -2,11 +2,13 @@
 require('dotenv').config()
 const express = require('express');
 
-// API Middleware Setup
 const app = express();
+
+// Middleware Setup
 app.use(express.json());
 
-// Service Routes
+// Routes
+app.use('/', express.static(__dirname + '/client'));
 app.use('/api', require('./routes'));
 
 app.listen(3000, function() {
